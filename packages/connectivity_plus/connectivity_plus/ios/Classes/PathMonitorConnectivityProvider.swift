@@ -10,6 +10,7 @@ public class PathMonitorConnectivityProvider: NSObject, ConnectivityProvider {
 
   public var currentConnectivityType: ConnectivityType {
     let path = ensurePathMonitor().currentPath
+
     // .satisfied means that the network is available
     if path.status == .satisfied {
       if path.usesInterfaceType(.wifi) {
